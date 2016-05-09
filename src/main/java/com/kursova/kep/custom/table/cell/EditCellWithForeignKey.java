@@ -2,7 +2,8 @@ package com.kursova.kep.custom.table.cell;
 
 import com.kursova.kep.control.main.edit.ControlForeignStage;
 import com.kursova.kep.custom.stage.ExtendStage;
-import com.kursova.kep.entity.*;
+import com.kursova.kep.entity.BaseEntity;
+import com.kursova.kep.entity.BaseWithName;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.TableCell;
 import javafx.scene.input.MouseButton;
@@ -21,7 +22,7 @@ public class EditCellWithForeignKey<S extends BaseEntity, T> extends TableCell<S
 
     private ExtendStage stage;
 
-    public EditCellWithForeignKey(Class childrenClass, Class parentClass){
+    public EditCellWithForeignKey(Class childrenClass, Class parentClass) {
         this.childrenClass = childrenClass;
         this.parentClass = parentClass;
     }
@@ -44,7 +45,7 @@ public class EditCellWithForeignKey<S extends BaseEntity, T> extends TableCell<S
         }
     }
 
-    public void createStage(){
+    public void createStage() {
         stage = new ExtendStage(EditCellWithForeignKey.class.getClassLoader()
                 .getResource("view/main/cell_first/view.fxml"));
 
@@ -59,13 +60,12 @@ public class EditCellWithForeignKey<S extends BaseEntity, T> extends TableCell<S
         editFirst.setClass(childrenClass);
 
         editFirst.add.addEventFilter(MouseEvent.MOUSE_CLICKED, event -> {
-            if (event.getButton() == MouseButton.PRIMARY && !editFirst.table.getItems().isEmpty()){
+            if (event.getButton() == MouseButton.PRIMARY && !editFirst.table.getItems().isEmpty()) {
 
                 if (editFirst.table.getSelectionModel().getSelectedItem() == null) {
                     stage.close();
                     cancelEdit();
-                }
-                else {
+                } else {
                     T t = (T) editFirst.table.getSelectionModel().getSelectedItem();
                     commitEdit(t);
                     stage.close();
@@ -73,19 +73,22 @@ public class EditCellWithForeignKey<S extends BaseEntity, T> extends TableCell<S
             }
         });
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.onShownProperty().setValue(event -> editFirst.setId(Math.toIntExact(((BaseEntity) getItem()).getId())));
+
+        if (getItem() != null)
+            stage.onShownProperty().setValue(event ->
+                editFirst.setId(Math.toIntExact(((BaseEntity) getItem()).getId())));
 
         editFirst.close.addEventFilter(MouseEvent.MOUSE_CLICKED, event -> {
-            if (event.getButton() == MouseButton.PRIMARY){
+            if (event.getButton() == MouseButton.PRIMARY) {
                 stage.close();
             }
         });
     }
 
     public void startEdit() {
-        if (!isEmpty()){
+        if (!isEmpty()) {
             super.startEdit();
-            if (stage == null){
+            if (stage == null) {
                 createStage();
             }
             stage.showAndWait();
@@ -108,8 +111,8 @@ public class EditCellWithForeignKey<S extends BaseEntity, T> extends TableCell<S
         return getItem() == null
                 ? null
                 : getItem() instanceof BaseWithName
-                        ? ((BaseWithName) getItem()).getName()
-                        : ((BaseEntity) getItem()).getId() + "";
+                ? ((BaseWithName) getItem()).getName()
+                : ((BaseEntity) getItem()).getId() + "";
     }
 
 }

@@ -166,7 +166,7 @@ public class TableColumnsGenerator {
         column.setCellFactory(param -> new EditCellWithForeignKey<>(method.getReturnType(), method.getDeclaringClass()));
 
         column.setOnEditCommit(event -> {
-            Object object = Client.get(method.getReturnType().getSimpleName().toLowerCase() + "/" + ((BaseWithName) event.getNewValue()).getId(), method.getReturnType())
+            Object object = Client.get(method.getReturnType().getSimpleName().toLowerCase() + "/" + ((BaseEntity) event.getNewValue()).getId(), method.getReturnType())
                     .build();
 
             try {
