@@ -1,0 +1,93 @@
+
+
+#main-border-pane{
+    -fx-background-color: #909090;
+}
+
+#top-border-pane{
+    -fx-background-color: #383838;
+}
+
+#top-hBox{
+    -fx-background-color: #383838;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, #555555, 0, 1.0, 1.6, 2);
+}
+
+#top-button{
+    -fx-background-color: #686868;
+    -fx-text-fill: #c4ccd3;
+    -fx-effect: dropshadow(gaussian, #555555, 0, 1.0, 1.6, 2);
+}
+
+#top-button:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+            #9d4024,
+            #d86e3a,
+            radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+    -fx-effect: dropshadow(gaussian, #383838, 0, 1.0, 1.6, 2);
+}
+#top-button:pressed {
+    -fx-padding: 5 10 7 10;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+#top-button:focused {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #693111 100%),
+            #9d4024,
+            #9f5034,
+            radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+    -fx-padding: 5 10 7 10;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+    -fx-effect: dropshadow(gaussian, #383838, 0, 1.0, 1.6, 2);
+}
+
+#label-header{
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #693111 100%),
+            #9d4024,
+            #9f5034,
+            radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+    -fx-background-radius: 10;
+}
+
+#vBox-left{
+    -fx-background-color: #7d7d7d;
+}
+
+#while-text{
+    -fx-text-fill: #c4ccd3;
+}
+
+#top-label{
+    -fx-background-color: #d1d1d1;
+    -fx-text-fill: #464c4e;
+    -fx-font-size: 12pt;
+    -fx-effect: dropshadow(gaussian, #555555, 0, 1.0, 1.6, 2);
+}
+
+#top-label:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+            #9d4024,
+            #d86e3a,
+            radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+    -fx-effect: dropshadow(gaussian, #383838, 0, 1.0, 1.6, 2);
+}
+#top-label:pressed {
+    -fx-padding: 5 10 7 10;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+#top-label:focused {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #693111 100%),
+            #9d4024,
+            #9f5034,
+            radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+    -fx-padding: 5 10 7 10;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+    -fx-effect: dropshadow(gaussian, #383838, 0, 1.0, 1.6, 2);
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="main-border-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="652.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursova.kep.control.main.edit.ControlForeignStageSecond">
+    <bottom>
+        <BorderPane prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <right>
+                <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button id="top-button" fx:id="buttonClose" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Закрити">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button id="top-button" fx:id="buttonAdd" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Додати">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </right>
+            <left>
+                <Label id="label-header" fx:id="label" text=" Table " BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <BorderPane.margin>
+                        <Insets left="10.0" />
+                    </BorderPane.margin>
+                </Label>
+            </left>
+        </BorderPane>
+    </bottom>
+   <top>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <TableView id="tableViewFirst" fx:id="tableViewFirst" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <BorderPane prefHeight="39.0" prefWidth="652.0" BorderPane.alignment="CENTER">
+               <left>
+                  <Label fx:id="label2" text="Уже додані записи/ Іще не додані" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </left>
+               <right>
+                  <Button id="top-button" fx:id="buttonDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Видалити" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets right="10.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </right>
+            </BorderPane>
+         </bottom>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <TableView id="tableViewSecond" fx:id="tableViewSecond" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

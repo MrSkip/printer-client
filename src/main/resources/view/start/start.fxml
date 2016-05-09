@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursova.kep.control.start.StartController">
+   <bottom>
+      <HBox BorderPane.alignment="TOP_CENTER">
+         <children>
+            <ProgressBar fx:id="progressBar" minHeight="-Infinity" prefHeight="12.0" prefWidth="521.0" progress="0.0">
+               <HBox.margin>
+                  <Insets left="5.0" right="19.0" top="8.0" />
+               </HBox.margin>
+            </ProgressBar>
+            <Button fx:id="close" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Відмінити">
+               <HBox.margin>
+                  <Insets bottom="2.0" right="2.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../icon/logotip_kep.jpg" />
+         </image>
+      </ImageView>
+   </center>
+</BorderPane>

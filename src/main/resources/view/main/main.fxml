@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="main-border-pane" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="821.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursova.kep.control.main.MainController">
+   <top>
+      <BorderPane prefHeight="67.0" prefWidth="633.0" BorderPane.alignment="CENTER">
+         <left>
+            <Pane prefHeight="200.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+         </left>
+         <bottom>
+            <Pane prefHeight="15.0" prefWidth="633.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <right>
+            <Pane prefHeight="149.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <Pane prefHeight="15.0" prefWidth="633.0" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <HBox id="top-hBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="top-button" fx:id="butFirma" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Фірма">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="top-button" fx:id="butPrinter" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Принтер">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></Button>
+                  <Button id="top-button" fx:id="butSpecification" mnemonicParsing="false" prefWidth="120.0" text="Специфікації">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </top>
+   <left>
+      <BorderPane prefHeight="445.0" prefWidth="258.0" BorderPane.alignment="CENTER">
+         <left>
+            <Pane prefHeight="410.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+         </left>
+         <bottom>
+            <Pane prefHeight="15.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <right>
+            <Pane prefHeight="398.0" prefWidth="31.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox id="vBox-left" alignment="TOP_CENTER">
+                     <children>
+                        <Label id="while-text" prefHeight="15.0" prefWidth="197.0" text="Поточна таблиця">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Serif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label id="label-header" fx:id="labCurrentTable" alignment="CENTER" minHeight="35.0" minWidth="170.0" prefHeight="35.0" prefWidth="152.0" text="Відділення">
+                           <font>
+                              <Font name="Droid Serif" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <VBox prefHeight="329.0" prefWidth="212.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label text=" Вікно помилок">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextArea fx:id="textArea" editable="false" prefHeight="159.0" prefWidth="212.0" />
+                              <Button fx:id="buttonPrint" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Друк">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="buttonExport" mnemonicParsing="false" prefHeight="25.0" prefWidth="264.0" text="Експорт у файл">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </top>
+                  </BorderPane>
+               </children></VBox>
+         </center>
+      </BorderPane>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <Pane prefHeight="15.0" prefWidth="515.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <right>
+            <Pane prefHeight="392.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <TableView fx:id="table" prefHeight="430.0" prefWidth="512.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </center>
+   <bottom>
+      <BorderPane prefHeight="35.0" prefWidth="821.0" BorderPane.alignment="CENTER">
+         <right>
+            <HBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="top-button" fx:id="buttonDelete" mnemonicParsing="false" prefWidth="120.0" text="Видалити">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="top-button" fx:id="buttonAdd" mnemonicParsing="false" prefWidth="120.0" text="Додати">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </bottom>
+</BorderPane>

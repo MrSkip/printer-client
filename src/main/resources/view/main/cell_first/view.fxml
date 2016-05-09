@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="main-border-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursova.kep.control.main.edit.ControlForeignStage">
+   <center>
+      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <BorderPane prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="top-button" fx:id="close" mnemonicParsing="false" text="Закрити">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="top-button" fx:id="add" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Додати">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </right>
+         <left>
+            <Label id="label-header" fx:id="label" text=" Table " BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </left>
+      </BorderPane>
+   </bottom>
+</BorderPane>
